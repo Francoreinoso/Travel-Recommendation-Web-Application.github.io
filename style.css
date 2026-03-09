@@ -114,6 +114,40 @@ ul {
   color: var(--white);
 }
 
+.nav-search {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.nav-search input {
+  padding: 0.4rem 0.85rem;
+  border: 1.5px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--white);
+  font-size: 0.88rem;
+  outline: none;
+  width: 190px;
+  transition:
+    border-color var(--transition),
+    background var(--transition);
+}
+
+.nav-search input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.nav-search input:focus {
+  border-color: var(--primary-light);
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.btn-nav {
+  padding: 0.38rem 0.85rem;
+  font-size: 0.82rem;
+}
+
 .nav-toggle {
   display: none;
   background: none;
@@ -728,6 +762,10 @@ ul {
    RESPONSIVE
    ==================================================== */
 @media (max-width: 768px) {
+  .nav-search {
+    display: none;
+  }
+
   .nav-links {
     display: none;
     position: absolute;

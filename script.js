@@ -290,10 +290,73 @@ function initNavToggle() {
 }
 
 // ======================================================
-// 6. INIT – runs on every page
+// 6. NAVBAR SEARCH (all pages)
+// ======================================================
+function initNavSearch() {
+  const navInput = document.getElementById("navSearchInput");
+  const navSearchBtn = document.getElementById("navSearchBtn");
+  const navClearBtn = document.getElementById("navClearBtn");
+
+  if (!navInput) return;
+
+  const isHome = !!document.getElementById("resultsGrid");
+
+  function doNavSearch() {
+    const q = navInput.value.trim();
+    if (!q) return;
+
+    if (isHome) {
+      // Sync with the main search input and trigger results
+      const mainInput = document.getElementById("searchInput");
+      if (mainInput) mainInput.value = q;
+      renderResults(categorize(q));
+    } else {
+      // Redirect to Home with query param
+      window.location.href = "index.html?q=" + encodeURIComponent(q);
+    }
+  }
+
+  navSearchBtn.addEventListener("click", doNavSearch);
+
+  navClearBtn.addEventListener("click", () => {
+    navInput.value = "";
+    if (isHome) {
+      const mainInput = document.getElementById("searchInput");
+      if (mainInput) mainInput.value = "";
+      resetSearch();
+    }
+    navInput.focus();
+  });
+
+  navInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") doNavSearch();
+  });
+}
+
+// ======================================================
+// 7. HANDLE ?q= QUERY PARAM ON HOME PAGE
+// ======================================================
+function handleQueryParam() {
+  if (!document.getElementById("resultsGrid")) return;
+
+  const params = new URLSearchParams(window.location.search);
+  const q = params.get("q");
+  if (!q) return;
+
+  const navInput = document.getElementById("navSearchInput");
+  const mainInput = document.getElementById("searchInput");
+  if (navInput) navInput.value = q;
+  if (mainInput) mainInput.value = q;
+  renderResults(categorize(q));
+}
+
+// ======================================================
+// 8. INIT – runs on every page
 // ======================================================
 document.addEventListener("DOMContentLoaded", () => {
   initNavToggle();
+  initNavSearch();
+  handleQueryParam();
   initSearch();
   initContactForm();
 });
