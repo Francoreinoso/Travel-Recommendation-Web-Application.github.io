@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us – TravelAdvisor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+      <div class="nav-brand">
+        <span class="brand-icon">✈</span>
+        <span class="brand-text">TravelAdvisor</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html" class="active">Contact Us</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    </nav>
+
+    <!-- ===== PAGE HEADER ===== -->
+    <header class="page-hero contact-hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you — reach out any time</p>
+      </div>
+    </header>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="contact-section">
+      <div class="container contact-wrapper">
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <h2>Get in Touch</h2>
+          <p>
+            Have a question, suggestion, or just want to share your travel
+            story? Drop us a message and we'll get back to you within 24 hours.
+          </p>
+          <ul class="contact-details">
+            <li>
+              <span class="contact-icon">📧</span>
+              <span>hello@traveladvisor.com</span>
+            </li>
+            <li>
+              <span class="contact-icon">📞</span>
+              <span>+1 (555) 234-5678</span>
+            </li>
+            <li>
+              <span class="contact-icon">📍</span>
+              <span>123 Explorer Ave, San Francisco, CA 94102</span>
+            </li>
+            <li>
+              <span class="contact-icon">🕐</span>
+              <span>Mon – Fri: 9:00 AM – 6:00 PM (PST)</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper">
+          <h2>Send Us a Message</h2>
+          <form id="contactForm" class="contact-form" novalidate>
+            <div class="form-group">
+              <label for="fullName"
+                >Full Name <span class="required">*</span></label
+              >
+              <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                placeholder="Your full name"
+                required
+              />
+              <span class="field-error" id="nameError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email"
+                >Email Address <span class="required">*</span></label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="your@email.com"
+                required
+              />
+              <span class="field-error" id="emailError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                placeholder="What is your message about?"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="message"
+                >Message <span class="required">*</span></label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Write your message here..."
+                required
+              ></textarea>
+              <span class="field-error" id="messageError"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full">
+              Send Message
+            </button>
+          </form>
+
+          <!-- Success message -->
+          <div class="form-success" id="formSuccess" style="display: none">
+            <span class="success-icon">✅</span>
+            <h3>Message Sent!</h3>
+            <p>
+              Thank you for reaching out. We'll reply to your email within 24
+              hours.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>&copy; 2025 TravelAdvisor. All rights reserved.</p>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

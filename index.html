@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Recommendations</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+      <div class="nav-brand">
+        <span class="brand-icon">✈</span>
+        <span class="brand-text">TravelAdvisor</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <header class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Discover Your Next Adventure</h1>
+        <p>
+          Explore breathtaking beaches, ancient temples, and incredible
+          countries around the world.
+        </p>
+        <a href="#search-section" class="btn btn-primary">Start Exploring</a>
+      </div>
+    </header>
+
+    <!-- ===== SEARCH SECTION ===== -->
+    <section class="search-section" id="search-section">
+      <div class="container">
+        <h2 class="section-title">Find Your Dream Destination</h2>
+        <p class="section-subtitle">
+          Search for <strong>beaches</strong>, <strong>temples</strong>, or a
+          <strong>country</strong> (e.g., Japan, Italy)
+        </p>
+        <div class="search-bar">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Try: beach, temple, japan, italy..."
+            autocomplete="off"
+          />
+          <button class="btn btn-primary" id="searchBtn">Search</button>
+          <button class="btn btn-secondary" id="resetBtn">Reset</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RESULTS SECTION ===== -->
+    <section class="results-section" id="results-section">
+      <div class="container">
+        <h2 class="section-title" id="resultsTitle" style="display: none"></h2>
+        <div class="cards-grid" id="resultsGrid"></div>
+        <p class="no-results" id="noResults" style="display: none">
+          No results found. Try searching for <strong>beach</strong>,
+          <strong>temple</strong>, or a country like <strong>Japan</strong>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== HIGHLIGHTS ===== -->
+    <section class="highlights-section">
+      <div class="container">
+        <h2 class="section-title">Why Travel with Us?</h2>
+        <div class="highlights-grid">
+          <div class="highlight-card">
+            <div class="highlight-icon">🌊</div>
+            <h3>Stunning Beaches</h3>
+            <p>
+              From tropical paradises to hidden coves, find the perfect
+              shoreline to relax and unwind.
+            </p>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">🏛️</div>
+            <h3>Ancient Temples</h3>
+            <p>
+              Step back in time and explore sacred temples filled with history,
+              culture, and beauty.
+            </p>
+          </div>
+          <div class="highlight-card">
+            <div class="highlight-icon">🌍</div>
+            <h3>Amazing Countries</h3>
+            <p>
+              Discover diverse cultures, cuisines, and landscapes across every
+              corner of the globe.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="container footer-inner">
+        <p>&copy; 2025 TravelAdvisor. All rights reserved.</p>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
